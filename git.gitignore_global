@@ -2,3 +2,5 @@
 Daily-Taskinator/
 
 *.md
+*.json
+/.vscode
