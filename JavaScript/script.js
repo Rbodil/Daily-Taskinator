@@ -39,7 +39,7 @@ function taskFormHandler(event) {
 };
 
 function createTaskEl(taskDataObj){
-    console.log(taskDataObj);
+    
     var listItemEl = document.createElement('li');
     listItemEl.className = "task-item";
 
@@ -128,7 +128,7 @@ function completeEditTask(taskName, taskType, taskId){
     taskSelected.querySelector("span.task-type").textContent = taskType;
 
     for (var i=0; i < tasks.length; i++){
-        console.log("hello")
+       
         if(tasks[i].id === parseInt(taskId)){
             tasks[i].name = taskName;
             tasks[i].type = taskType;
@@ -143,7 +143,7 @@ function completeEditTask(taskName, taskType, taskId){
 
 function taskButtonHandler(event){
     var targetEl = event.target;
-    console.log("it's me");
+    
     
     if(targetEl.matches('.edit-btn')){
         console.log("edit", targetEl)
@@ -174,7 +174,7 @@ function taskStatusChangeHandler(event){
         tasksCompletedEl.appendChild(taskSelected);
     };
     for (var i=0; i< tasks.length; i++){
-        console.log("who")
+        
         if(tasks[i].id === parseInt(taskId)){
             tasks[i].status = statusValue;
         }
